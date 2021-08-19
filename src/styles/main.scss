@@ -1,0 +1,20 @@
+@import 'typography';
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
+}
+
+@media screen and (max-width:640px) {
+    body {
+        position: absolute;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
+

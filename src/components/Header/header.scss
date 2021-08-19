@@ -1,0 +1,13 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+
+.header_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+
+    span {
+        @extend .body_text;
+    }
+}

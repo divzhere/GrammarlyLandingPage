@@ -1,0 +1,48 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+
+.main_section {
+    height: calc(100vh - 80px);
+    min-height: 680px;
+
+    .title_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+            @extend .heading_text;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            max-width: fit-content;
+        }
+    }
+
+    .slider_section {
+        display: flex;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.main_section_container {
+    background: no-repeat left -150px top -70px url(https://static.grammarly.com/assets/files/06666c30f97cce25ac1cf1c4573332c2/swoosh.png);
+}
+
+@media screen and (max-width:640px) {
+    .slider_section {
+        flex-wrap: wrap;
+    }
+
+    .main_section_container {
+        background: url(https://static.grammarly.com/assets/files/06666c30f97cce25ac1cf1c4573332c2/swoosh.png);
+        object-fit: cover;
+
+        .main_section {
+            height: auto;
+            width: auto;
+        }
+    }
+}

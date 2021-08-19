@@ -1,0 +1,87 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+@import '../../styles/colors';
+
+.bottom_section {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 492px;
+    background: no-repeat left -200px bottom -90px url(https://static.grammarly.com/assets/files/7704056c286a7b6b242f7f6839113502/swoosh.png);
+
+    .content_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 1080px;
+
+        .title {
+            @extend .heading_text;
+            margin-bottom: 16px
+        }
+
+        .subtitle {
+            @extend .subtitle_text;
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+    }
+
+}
+
+.footer {
+    background-color: #f0f2fc;
+    border-top: 1px solid rgba(0, 0, 1, .07);
+    padding: 40px 20px 0;
+
+    .footer_links {
+        margin: auto;
+        max-width: 1080px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .column {
+            .title {
+                margin-bottom: 15px;
+                @extend .subtitle_text;
+                font-weight: 700;
+                color: $footer_text_color;
+            }
+
+            .subtitle {
+                margin-bottom: 5px;
+                @extend .subtitle_text;
+                font-weight: 400;
+                color: $grey-text-color;
+            }
+        }
+    }
+
+    .copyright {
+        padding: 30px 0;
+        @extend .copyright_text;
+        margin: auto;
+        max-width: 1080px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .bottom_section {
+        .content_container {
+            .title {
+                text-align: center;
+            }
+
+            .subtitle {
+                text-align: center;
+            }
+        }
+    }
+}

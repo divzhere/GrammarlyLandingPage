@@ -1,0 +1,92 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+@import '../../styles/colors';
+
+.features_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 674px;
+    width: 100%;
+
+    .feature_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 1080px;
+        position: relative;
+    }
+
+    .sub_heading {
+        @extend .subheading_text;
+        margin-bottom: 8px;
+    }
+
+    .caption {
+        @extend .caption_text;
+        margin-bottom: 48px;
+    }
+
+    .plan_comparision {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        padding: 0 32px;
+
+        .summary {
+            display: flex;
+            height: 140px;
+            flex-direction: column;
+        }
+
+        .plan {
+            padding: 0 32px;
+            display: flex;
+            flex-direction: column;
+
+
+            .overline {
+                @extend .overline_text;
+                margin-bottom: 4px;
+            }
+
+            .title {
+                @extend .plan_heading;
+                margin-bottom: 4px;
+            }
+
+            .subtitle {
+                margin-bottom: 18px;
+                min-width: 270px;
+            }
+
+            ul {
+                list-style-image: url(https://static.grammarly.com/assets/files/3252614f5e974a46c75e9035de53011b/checkmark.svg);
+                padding: 0px;
+
+                li {
+                    margin-bottom: 8px;
+                    margin-left: 24px;
+
+                    img {
+                        display: block;
+                        margin: auto;
+                        max-width: 100%;
+                        padding: 0 6px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    .features_section {
+        .plan_comparision {
+            padding: 0 0;
+        }
+    }
+}

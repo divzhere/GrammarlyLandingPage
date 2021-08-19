@@ -1,0 +1,131 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+@import '../../styles/colors.scss';
+
+.slider_section {
+    display: flex;
+    align-items: center;
+
+    .animation_container {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        min-width: 640px;
+        width: 640px;
+    }
+
+    .image_container {
+        position: relative;
+        height: 336px;
+        width: 600px;
+
+        .writing_img {
+            left: 48px;
+            transition: opacity 300ms ease 1000ms;
+            box-shadow: 0 14px 55px rgba(109, 117, 141, .2);
+            border-radius: 10px;
+        }
+
+        .suggestion_img {
+            position: absolute;
+            left: 100px;
+            z-index: 1;
+            box-shadow: 0 14px 55px rgba(109, 117, 141, .2);
+            border-radius: 7px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            .title {
+                color: $blue-text-color;
+                @extend .title_text;
+            }
+
+            .active {
+                color: $text-color !important;
+            }
+
+            .subtitle {
+                @extend .subtitle_text;
+                color: $grey-text-color;
+            }
+
+            .line {
+                height: 2px;
+                width: 100%;
+                border-radius: 1px;
+                background-color: $progress-bar-grey;
+                margin-top: 16px;
+                animation: opacityWriting 3s ease 0s;
+
+                .fill {
+                    height: 2px;
+                    text-align: right;
+                    background-color: $text-color;
+                    transition: width 6967.19ms linear 0ms;
+                    width: 50;
+                    height: 2px;
+                }
+            }
+
+            .line {
+                height: 2px;
+                position: relative;
+                border-radius: 1px;
+                background: $progress-bar-grey;
+                margin-top: 16px;
+                overflow: hidden;
+            }
+
+            .line span {
+                display: block;
+                height: 100%;
+            }
+
+            .progress {
+                background-color: $text-color;
+                animation: progressBar 7s linear 0s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes progressBar {
+                0% {
+                    width: 0;
+                }
+
+                100% {
+                    width: 100%;
+                }
+            }
+
+            @keyframes opacityWriting {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 100;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    img {
+        max-width: 100%;
+    }
+    .slider_section {
+        margin-top: 24px;
+        flex-wrap: wrap;
+    }
+
+}

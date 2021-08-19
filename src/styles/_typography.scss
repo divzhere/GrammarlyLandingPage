@@ -1,0 +1,83 @@
+@import 'colors';
+
+.body_text {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.title_text {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.subtitle_text {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.heading_text {
+    font-family: 'Circular', sans-serif;
+    font-size: 44px;
+    letter-spacing: -0.005em;
+    line-height: 52px;
+    font-weight: 700;
+}
+
+.subheading_text {
+    font-family: 'Circular', sans-serif;
+    font-size: 30px;
+    letter-spacing: -.003em;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.stats_heading {
+    font-family: 'Circular', sans-serif;
+    font-size: 40px;
+    letter-spacing: -.003em;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.caption_text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.overline_text {
+    color: $grey-text-color;
+    font-size: 11px;
+    letter-spacing: .04em;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.plan_heading {
+    font-family: Circular, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.video_heading {
+    font-family: Circular, sans-serif;
+    font-size: 30px;
+    letter-spacing: -.003em;
+    line-height: 40px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.copyright_text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $copyright_color;
+}

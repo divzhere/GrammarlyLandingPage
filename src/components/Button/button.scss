@@ -1,0 +1,32 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+.button {
+    background-color: $accent-color;
+    color: $white;
+    padding: 0 8px;
+    border-radius: 6px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .body_text;
+    width: 284px;
+}
+
+.disabled {
+    background: $disabled-color;
+    color: $text-color-disabled;
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background-color: $disabled-color !important;
+}
+
+.button:hover {
+    background-color: $accent-hover-color;
+    transition: 100ms ease-in;
+}

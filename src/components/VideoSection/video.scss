@@ -1,0 +1,71 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+@import '../../styles/colors.scss';
+
+.video_section {
+    background: no-repeat right -300px bottom -70px url(https://static.grammarly.com/assets/files/de31835f4f228f5ffb03a8a527a44413/swoosh.png);
+    background-color: #3659b5;
+    display: flex;
+    justify-content: center;
+    padding: 96px 0;
+
+    .video_container {
+        flex-direction: column;
+        max-width: 1080px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            @extend .video_heading;
+            color: $white;
+            margin-bottom: 16px;
+        }
+
+        .sub_title {
+            color: $white;
+            @extend .caption_text;
+        }
+    }
+
+    .video {
+        .video_thumbnail {
+            border-radius: 10px;
+            max-height: 300px;
+            cursor: pointer;
+        }
+
+        .video_thumbnail:hover {
+            box-shadow: 0 42px 60px rgba(26, 33, 52, 11%);
+            transition: all .5s;
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    .video_section {
+        .content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .text {
+            .sub_title {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../styles/main.scss';
+@import '../../styles/typography';
+@import '../../styles/colors.scss';
+
+.stats_section {
+    background-color: $grey-bg;
+
+    .stats_container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        padding: 64px 0 104px;
+        margin: 0 auto;
+        max-width: 1080px;
+        flex-direction: column;
+
+        .title {
+            @extend .video_heading;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            margin-bottom: 72px;
+            @extend .caption_text;
+        }
+
+        .score_results {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .score_component {
+                width: 100%;
+
+                .text {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    .stats_section {
+        .stats_container {
+            align-items: center;
+
+            .score_results {
+                flex-wrap: wrap;
+
+                .score_component {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .text {
+                        text-align: right;
+                        margin-top: 0;
+                        width: 200px;
+                        word-wrap: break-word
+                    }
+                }
+            }
+        }
+    }
+}
