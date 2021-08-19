@@ -2,6 +2,8 @@
 
 Frontend clone of Grammarly Premium Landing Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/35da314b-1a7b-4222-9862-9bc74e3d5a03/deploy-status)](https://app.netlify.com/sites/brave-hodgkin-1887a1/deploys)
+
 ## Tech
 - ReactJS
 - SASS
