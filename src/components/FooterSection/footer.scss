@@ -45,6 +45,7 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .column {
             .title {
@@ -82,6 +83,12 @@
             .subtitle {
                 text-align: center;
             }
+        }
+    }
+
+    .footer_links {
+        .column {
+            margin-left: 12px;
         }
     }
 }

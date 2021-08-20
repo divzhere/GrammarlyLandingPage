@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./slider.scss";
 import { sliderJson } from "./sliderContent";
 import Button from "../Button/Button";
+import useWindowDimensions from "../../utils/useWindowDimensions";
 export default function Slider() {
   const [sliderData, setSliderData] = useState(sliderJson);
+  const { width } = useWindowDimensions();
   const handleActive = (data) => {
     let activeIndex = 0;
     for (let i = 0; i < data.length; i++) {
@@ -63,7 +65,17 @@ export default function Slider() {
                         src={data.suggestionImg}
                         alt={data.subTitle}
                         className="suggestion_img animate__animated animate__fadeInDown animate__delay-1s animate__fast"
-                        style={{ bottom: `${i !== 0 ? 46 : 16}px` }}
+                        style={{
+                          bottom: `${
+                            width < 640
+                              ? i !== 0
+                                ? -16
+                                : -46
+                              : i !== 0
+                              ? 46
+                              : 16
+                          }px`,
+                        }}
                       />
                     </div>
                   )}

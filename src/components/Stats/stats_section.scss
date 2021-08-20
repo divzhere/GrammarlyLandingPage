@@ -46,6 +46,14 @@
         .stats_container {
             align-items: center;
 
+            .title {
+                text-align: center;
+            }
+
+            .subtitle {
+                text-align: center;
+            }
+
             .score_results {
                 flex-wrap: wrap;
 

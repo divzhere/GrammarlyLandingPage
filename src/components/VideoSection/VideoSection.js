@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import "./video.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
-
+import useWindowDimensions from "../../utils/useWindowDimensions";
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    width: "100vw",
   },
 }));
 
 export default function VideoSection() {
+  const { width } = useWindowDimensions();
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -23,7 +25,13 @@ export default function VideoSection() {
   };
   const modalBody = (
     <div className="modal">
-      <video width="1120" height="635" controls autoplay preload="auto">
+      <video
+        width={`${width}-${(40 * width) / 100}`}
+        height="auto"
+        controls
+        autoplay
+        preload="auto"
+      >
         <source
           src="https://static.grammarly.com/assets/videos/professional_outcomes.mp4"
           type="video/mp4"

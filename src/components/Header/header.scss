@@ -11,3 +11,13 @@
         @extend .body_text;
     }
 }
+
+
+@media screen and (max-width:640px) {
+    .header_section {
+        max-width: 100vw;
+        justify-content: space-around;
+        padding: 0px;
+        margin-top: 12px;
+    }
+}

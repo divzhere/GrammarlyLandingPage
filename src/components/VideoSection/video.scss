@@ -21,6 +21,7 @@
     .content {
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
     }
@@ -58,14 +59,26 @@
 @media screen and (max-width:640px) {
     .video_section {
         .content {
-            flex-wrap: wrap;
             justify-content: center;
+
         }
 
         .text {
+
+            .title,
+            .sub_title {
+                text-align: center;
+            }
+
             .sub_title {
                 margin-bottom: 16px;
             }
         }
+
+        .video {
+            max-width: 80vw;
+        }
+
+        
     }
 }
