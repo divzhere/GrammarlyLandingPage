@@ -34,7 +34,7 @@
         flex-direction: row;
         height: 100%;
         padding: 0 32px;
-        flex-wrap: wrap;
+
 
         .summary {
             display: flex;
@@ -97,6 +97,7 @@
 
         .plan_comparision {
             padding: 0 0;
+            flex-wrap: wrap;
 
             .summary {
                 justify-content: flex-end;
